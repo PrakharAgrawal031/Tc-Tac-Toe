@@ -4,7 +4,7 @@ from array import array
 input_list = []
 rows, cols = (3, 3)
 winn = False
-winner = 'None'
+winner = 'No one'
 arr = [[" " for i in range(cols)] for j in range(rows)]
 
 
@@ -89,7 +89,7 @@ def win_check(arr_1):
         elif arr_1[2][0] == arr_1[1][1] == arr_1[0][2] != ' ':
             return arr_1[x][y]
         else:
-            return 'None'
+            return 'No one'
             
 
 def print_real_arr(arr):
@@ -116,7 +116,7 @@ for z in range(1, 10):
             winner = win_check(arr)
         else:
             pass
-    if winner != 'None':
+    if winner != 'No one':
         break
     else:
         pass
