@@ -8,14 +8,38 @@ winner = 'No one'
 arr = [[" " for i in range(cols)] for j in range(rows)]
 
 
-def print_grid():
-    row_1 = ' | | '
+def print_grid(arr):
+    '''row_1 = ' | | '
     row_sep_1 = '-+-+-'
     row_2 = ' | | '
     row_sep_2 = '-+-+-'
     row_3 = ' | | '
+    y=0
+    for x in range(0, 3):
+       
+        list1 = list(row_1)
+        list1[y] = arr[0][x]
+        y += 2
+    row_1 = ''.join(list1)
+    y = 0
+    for x in range(0, 3):  
+        list1 = list(row_2)
+        list1[y] = arr[1][x]
+        y += 2
+    row_2 = ''.join(list1)
+    y = 0
+    for x in range(0, 3):
+        list1 = list(row_3)
+        list1[y] = arr[2][x]
+        y += 2
+    row_3 = ''.join(list1)
     print('\n', row_1, '\n', row_sep_1, '\n',
-          row_2, '\n', row_sep_2, '\n', row_3,)
+          row_2, '\n', row_sep_2, '\n', row_3,)'''
+    print(arr[0][0]+'|'+ arr[0][1]+'|'+arr[0][2])
+    print('-+-+-')
+    print(arr[1][0]+'|'+ arr[1][1]+'|'+arr[1][2])
+    print('-+-+-')
+    print(arr[2][0]+'|'+ arr[2][1]+'|'+arr[2][2])
 
 
 def user_input(num_1):
@@ -102,7 +126,8 @@ for z in range(1, 10):
     if z % 2 != 0:
         temp_num = user_input(num_1)
         editing_array_pa(temp_num)
-        print_real_arr(arr)
+        print_grid(arr)
+        ##print_real_arr(arr)
         if z > 4:
             winner = win_check(arr)
         else:
@@ -111,7 +136,8 @@ for z in range(1, 10):
         temp_num = user_input(num_1)
         print(input_list)
         editing_array_pb(temp_num)
-        print_real_arr(arr)
+        print_grid(arr)
+        ##print_real_arr(arr)
         if z > 4:
             winner = win_check(arr)
         else:
