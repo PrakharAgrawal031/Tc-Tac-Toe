@@ -43,7 +43,7 @@ def print_grid(arr):
 
 
 def user_input(num_1):
-    print('\n', '7 8 9', '\n', '4,5,6', '\n', '1 2 3')
+    print('\n', '7 8 9', '\n', '4 5 6', '\n', '1 2 3')
     tester = True
     while(tester):
         num_1 = int(
